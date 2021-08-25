@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média bimestral</title>
+    <h1>#Média Bimestral#</h1>
+</head>
+<body>
+    <div id='topo'></div>
+
+    <h2>Ficamos felizes com o seu acesso!</h2>
+    <br>Preencha os campos abaixo com as notas bimestrais para que você descubra</br>
+    a sua média:
+
+    <div id='bimestre'>
+        <p>Nota 1º bimestre <input type="number" name="nota1" id="nota1"></p>
+        <p>Nota 2º bimestre <input type="number" name="nota2" id="nota2"></p>
+        <p>Nota 3º bimestre <input type="number" name="nota3" id="nota3"></p>
+        <p>Nota 4º bimestre <input type="number" name="nota4" id="nota4"></p>
+        <p><input type="button" value="Calcular" onclick="calcular()"> </p>
+    </div>
+
+    <div id=res>
+        Resultado
+    </div>
+    
+    <div id=res>
+    </div>
+
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+        var topo=document.getElementById('topo')
+        topo.innerHTML=`Seja bem vindo ${nome}`
+        
+        function calcular() {
+        var m1 = document.getElementById('nota1')
+        var m2 = document.getElementById('nota2')
+        var m3 = document.getElementById('nota3')
+        var m4 = document.getElementById('nota4')
+        var res = window.document.getElementById('res')
+        var n1 = Number(m1.value)
+        var n2 = Number(m2.value)
+        var n3 = Number(m3.value)
+        var n4 = Number(m4.value)
+        var soma = n1 + n2 + n3 + n4
+        var média = soma / 4
+        res.innerHTML = `A sua média bimestral foi ${média}`
+    }
+
+    </script>
+</body>
+</html>
